@@ -1,6 +1,6 @@
 # credit-card-fraud-detection
 Detecting fraudulent credit card transactions using Machine Learning
-# Credit Card Fraud Detection Project 
+# Credit card fraud detection project 
 
 ## Dataset
 
@@ -14,14 +14,14 @@ The data used comes from the "Credit Card Fraud Detection" dataset available on 
 
 ## Methodology 
 
-1.  **Exploratory Data Analysis (EDA):**
+1.  **Exploratory Data Analysis :**
     * Checked for missing values (none found).
     * Visualized the extreme class imbalance using `countplot`.
     * Confirmed the decorrelation of PCA features (`V1`-`V28`) using a correlation matrix heatmap.
 
 2.  **Preprocessing:**
     * Scaled the `Time` and `Amount` columns using `StandardScaler` to bring them to a similar scale as the PCA features.
-    * Split the data into training (25%) and validation (75%) sets using `train_test_split` with a fixed `random_state` for reproducibility. *Note: A 25/75 split surprisingly yielded better balanced results than an 80/20 split in cross-validation.*
+    * Split the data into training (25%) and validation (75%) sets using `train_test_split` with a fixed `random_state` for reproducibility. *Note: A 25/75 split surprisingly provided better results than an 80/20 split in cross-validation.*
 
 3.  **Handling Class Imbalance:**
     * Established a model (`LogisticRegression`) on the raw imbalanced data, demonstrating poor recall for the fraud class.
